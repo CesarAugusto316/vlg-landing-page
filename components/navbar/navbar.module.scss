@@ -3,10 +3,14 @@
   color: var(--color-base-100);
   background-color: var(--color-primary);
 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8rem;
 
   ul {
     display: flex;
-    gap: 5rem;
+    gap: 4rem;
 
     .link {
       color: var(--color-base-100);
