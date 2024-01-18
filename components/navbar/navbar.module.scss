@@ -1,3 +1,15 @@
 .container {
+  height: 10rem;
+  color: var(--color-base-100);
   background-color: var(--color-primary);
+
+
+  ul {
+    display: flex;
+    gap: 5rem;
+
+    .link {
+      color: var(--color-base-100);
+    }
+  }
 }

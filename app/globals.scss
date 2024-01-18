@@ -33,10 +33,10 @@
   border: none;
   scroll-behavior: smooth;
   user-select: none;
-  color: var(--color-base-content);
 }
 
 body {
+  color: var(--color-base-content);
   font-size: 1.6rem;
   background-color: var(--color-base-100);
   min-height: 100vh;
