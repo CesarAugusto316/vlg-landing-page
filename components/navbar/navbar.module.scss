@@ -8,12 +8,21 @@
   justify-content: space-between;
   padding: 0 8rem;
 
-  ul {
+  .navigation {
     display: flex;
+    align-items: center;
     gap: 4rem;
 
-    .link {
-      color: var(--color-base-100);
+    ul {
+      display: flex;
+      gap: 4rem;
+
+      .link {
+        color: var(--color-base-100);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
     }
   }
 }
