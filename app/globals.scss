@@ -5,11 +5,14 @@
   --color-primary: rgb(55, 124, 251);
   --color-primary-focus: rgb(5, 87, 240);
   --color-primary-content: rgb(28, 40, 63);
+
   --color-secondary: rgb(102, 204, 138);
   --color-secondary-focus: rgb(61, 184, 104);
   --color-secondary-content: rgb(40, 71, 56);
+
   --color-accent: rgb(234, 82, 52);
   --color-neutral: rgb(42, 42, 42);
+
   --color-neutral-content: rgb(148, 152, 203);
   --color-primary-shadow: rgba(3, 69, 190, 0.6);
 
@@ -31,11 +34,12 @@
   border: none;
   scroll-behavior: smooth;
   user-select: none;
+  font-size: 1.6rem;
+  color: var(--color-base-content);
 }
 
 body {
-  font-size: 1.6rem;
-  color: var(--color-base-content);
+  background-color: var(--color-base-100);
 }
 
 ul {

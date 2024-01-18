@@ -17,7 +17,15 @@ interface RootProps {
 export default function RootLayout({ children }: RootProps) {
   return (
     <html lang="en">
-      <body className={poppins.className}>{children}</body>
+      <body className={poppins.className}>
+        <nav>
+          <ul>
+            <li>Mexico</li>
+            <li>Chile</li>
+          </ul>
+        </nav>
+        {children}
+      </body>
     </html>
   )
 }
