@@ -1,0 +1,12 @@
+@mixin Link () {
+  color: var(--color-base-100);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+
+  img {
+    transform: scale(0.82);
+  }
+}
+// Path: sass/_mixins.scss

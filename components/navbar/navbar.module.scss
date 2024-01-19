@@ -1,5 +1,8 @@
+@import '../../sass/mixins';
+
 .container {
   position: fixed;
+  z-index: 100;
   width: 100%;
   top: 0%;
   height: 9rem;
@@ -26,15 +29,7 @@
       gap: 4rem;
 
       .link {
-        color: var(--color-base-100);
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        font-size: 1.5rem;
-
-        img {
-          transform: scale(0.82);
-        }
+        @include Link();
       }
     }
   }

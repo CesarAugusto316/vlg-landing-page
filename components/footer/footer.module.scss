@@ -1,4 +1,68 @@
+@import '../../sass/mixins';
+
 .container {
   background-color: var(--color-primary);
+  color: var(--color-base-100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16rem;
+
   height: 33.6rem;
+
+  .col1 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+
+
+    h3 {
+      font-size: 2.4rem;
+      font-weight: bold;
+    }
+
+    ul {
+      display: flex;
+      gap: 1.8rem;
+
+      img {
+        height: 2.8rem;
+        width: 2.8rem;
+      }
+    }
+
+    p {
+      font-weight: 200;
+    }
+  }
+
+  .col2 {
+    display: flex;
+    gap: 6rem;
+
+    @mixin List () {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    ul:first-child {
+      @include List();
+      border-left: 2px solid var(--color-base-100);
+      padding: 1rem 1.8rem
+    }
+
+    ul:last-child {
+      @include List();
+    }
+
+    .link {
+      @include Link();
+    }
+  }
+
+  .logo {
+    height: 14rem;
+    width: 14rem;
+  }
 }
