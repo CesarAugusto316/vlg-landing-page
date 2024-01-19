@@ -1,13 +1,14 @@
 .container{
   min-height: 100vh;
-  padding: 12rem;
+  padding: 10rem 0rem;
+  padding-top: 12rem;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
   .section {
-    width: 94rem;
+    width: 98rem;
     display: flex;
     flex-direction: column;
     gap: 3rem;

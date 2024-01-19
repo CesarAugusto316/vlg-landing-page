@@ -4,9 +4,9 @@
   border: solid 2px var(--color-primary); // Add this line
 
   &:hover {
-    background-color: var(--color-base-content);
+    background-color: var(--color-primary-focus);
     color: var(--color-base-100);
-    border-color: var(--color-base-100); // Add this line
+    border-color: var(--color-primary-focus); // Add this line
     transition: all 0.3s ease;
   }
 

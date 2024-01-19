@@ -1,9 +1,10 @@
+import { HeroSection } from '@/components/index';
 
 
 export default function Contacts(): JSX.Element {
   return (
-    <div>
+    <HeroSection>
       <h1>Contacts</h1>
-    </div>
-  );
-};
+    </HeroSection>
+  )
+}
