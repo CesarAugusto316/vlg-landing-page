@@ -15,7 +15,7 @@ export const Footer: FC = () => {
   return (
     <footer className={styles.container}>
 
-      <div className={styles.col1}>
+      <section className={styles.col1}>
         <h3>Victoria Line Group</h3>
         <p>2024 @ VictoriaLineGroup <br />
           Todos los derechos reservados.
@@ -35,9 +35,9 @@ export const Footer: FC = () => {
             <Image src={twitter} alt="insta-logo" />
           </li>
         </ul>
-      </div>
+      </section>
 
-      <div className={styles.col2}>
+      <section className={styles.col2}>
         <ul>
           <li>
             <Link href="/" className={styles.link}>Inicio</Link>
@@ -64,7 +64,7 @@ export const Footer: FC = () => {
             </Link>
           </li>
         </ul>
-      </div>
+      </section>
 
       <Image className={styles.logo} src={logo} alt="vlg-log" />
     </footer>

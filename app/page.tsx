@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
 
-      <div className={styles.hero}>
+      <section className={styles.hero}>
         <Image src={logo} alt="vlg-header-logo" className={styles.img} />
 
         <div className={styles.buttons}>
@@ -29,7 +29,7 @@ export default function Home() {
             </Button>
           </Link>
         </div>
-      </div>
+      </section>
 
     </main>
   )

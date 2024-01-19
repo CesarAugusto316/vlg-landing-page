@@ -1,4 +1,3 @@
-'use client'
 import { FC } from 'react';
 import Link from 'next/link'
 import styles from './navbar.module.scss'
@@ -13,7 +12,7 @@ export const Navbar: FC = () => {
   return (
     <nav className={styles.container}>
 
-      <div className={styles.navigation}>
+      <section className={styles.navigation}>
         <Link href="/">
           <Image className={styles.logo} src={logo} alt="vlg-logo" />
         </Link>
@@ -38,9 +37,11 @@ export const Navbar: FC = () => {
             <Link href="/contacts" className={styles.link}>Contactos</Link>
           </li>
         </ul>
-      </div>
+      </section>
 
-      <Button variant="light" onClick={(e) => console.log(e)}>Seguimiento</Button>
+      {/* <Link href="/seguimientos"> */}
+      <Button variant="light">Seguimiento</Button>
+      {/* </Link> */}
     </nav>
   )
 }
