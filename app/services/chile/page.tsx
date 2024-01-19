@@ -1,5 +1,6 @@
 import styles from './page.module.scss'
 
+
 export default function Chile(): JSX.Element {
   return (
     <div className={styles.container}>

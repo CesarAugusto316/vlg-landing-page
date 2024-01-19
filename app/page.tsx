@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <HeroSection>
 
-      <main className={styles.hero}>
+      <main className={styles.main}>
         <Image src={logo} alt="vlg-header-logo" className={styles.img} />
 
         <div className={styles.buttons}>
