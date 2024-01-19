@@ -1,5 +1,8 @@
 .container {
-  height: 10rem;
+  position: fixed;
+  width: 100%;
+  top: 0%;
+  height: 9rem;
   color: var(--color-base-100);
   background-color: var(--color-primary);
 
@@ -13,6 +16,11 @@
     align-items: center;
     gap: 4rem;
 
+    .logo {
+      height: 6rem;
+      width: 6rem;
+    }
+
     ul {
       display: flex;
       gap: 4rem;
@@ -22,6 +30,11 @@
         display: flex;
         align-items: center;
         gap: 0.5rem;
+        font-size: 1.5rem;
+
+        img {
+          transform: scale(0.82);
+        }
       }
     }
   }

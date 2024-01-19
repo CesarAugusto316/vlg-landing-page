@@ -40,6 +40,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 ul {
@@ -51,8 +52,9 @@ a {
 }
 
 *:focus {
-  outline: 1px solid var(--color-primary);
-  box-shadow: 0px 0px 10px 0px var(--color-primary-shadow);
+  outline: none;
+  // outline: 1px solid var(--color-primary);
+  // box-shadow: 0px 0px 10px 0px var(--color-primary-shadow);
 }
 
 @media screen and (max-width: 900px) {
