@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(180deg, var(--color-base-100) 0%, var(--color-base-150) 100%);
 
   .img {
     height: 32rem;

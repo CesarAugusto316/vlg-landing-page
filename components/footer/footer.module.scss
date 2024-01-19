@@ -49,7 +49,7 @@
     ul:first-child {
       @include List();
       border-left: 2px solid var(--color-base-100);
-      padding: 1rem 1.8rem
+      padding: 1rem 1.8rem;
     }
 
     ul:last-child {
@@ -58,6 +58,7 @@
 
     .link {
       @include Link();
+      font-size: 1.6rem;
     }
   }
 
