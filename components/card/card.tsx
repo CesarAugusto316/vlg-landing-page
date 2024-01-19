@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 import styles from './card.module.scss'
 import Image, { StaticImageData } from 'next/image';
 import { Button } from '@/components/index';
@@ -8,7 +8,7 @@ import Link from 'next/link';
 interface CardProps {
   title: string,
   img: StaticImageData,
-  description: string,
+  description: React.ReactNode,
   link: string
 }
 
