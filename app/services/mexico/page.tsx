@@ -1,12 +1,12 @@
 import { Card, ServiceSection } from '@/components/index'
 import styles from './page.module.scss'
-import img1 from '@/assets/image 21.png'
-import img2 from '@/assets/image 22.png'
+import img1 from '@/assets/image 24.png'
+import img2 from '@/assets/image 25.png'
 
 
 const cardData = [
   {
-    title: 'VLG Chile',
+    title: 'VLG México',
     img: img1,
     description: (
       <>
@@ -14,19 +14,19 @@ const cardData = [
         <br /> Lorem Ipsum is simply dummy
       </>
     ),
-    link: '/services/chile/vlg-chile',
+    link: '/services/mexico/vlg-mexico',
   },
   {
-    title: 'VLG Storage & Logistic',
+    title: 'VLG Shipping',
     img: img2,
     description: (
       <>
-        <b>Why do we use it?</b>
-        <br /> Lorem Ipsum is simply dummy
+        Line Group Lorem Ipsum <br />
+        <b>is simply dummy</b>
       </>
     ),
-    link: '/services/chile/vlg-chile',
-  }
+    link: '/services/mexico/vlg-shipping',
+  },
 ];
 
 

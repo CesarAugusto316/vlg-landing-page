@@ -26,7 +26,7 @@ const cardData = [
         <br /> Lorem Ipsum is simply dummy
       </>
     ),
-    link: '/services/chile/vlg-chile',
+    link: '/services/chile/vlg-storage-&-Logistic',
   },
   {
     title: 'VLG Agrominerals',
@@ -37,7 +37,7 @@ const cardData = [
         <b>is simply dummy</b>
       </>
     ),
-    link: '/services/chile/vlg-chile',
+    link: '/services/chile/vlg-agrominerals',
   },
 ];
 
