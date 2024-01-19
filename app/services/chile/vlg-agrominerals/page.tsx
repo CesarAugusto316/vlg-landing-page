@@ -1,12 +1,12 @@
 import { SectionOne } from '@/components/index';
-import img1 from '@/assets/image 21_big.png';
+import img1 from '@/assets/image 23_big.png';
 
 
 export default function VlgAgrominerals(): JSX.Element {
   return (
     <SectionOne
-      title="VLG Chile"
-      subtitle="Where can I get some?"
+      title="VLG Agrominerals"
+      subtitle="Line Group"
       img={img1}
       link="#"
       description="
