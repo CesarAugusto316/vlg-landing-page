@@ -46,19 +46,19 @@ export const Footer: FC = () => {
             <Link href="/contacts" className={styles.link}>Contactos</Link>
           </li>
           <li>
-            <Link href="/contacts" className={styles.link}>Seguimientos</Link>
+            <Link href="/seguimientos" className={styles.link}>Seguimientos</Link>
           </li>
         </ul>
 
         <ul>
           <li>
-            <Link href="/chile" className={styles.link}>
+            <Link href="/services/chile" className={styles.link}>
               <Image src={chileFlag} alt="chile-flag" />
               <span>VGL Chile</span>
             </Link>
           </li>
           <li>
-            <Link href="/mexico" className={styles.link}>
+            <Link href="/services/mexico" className={styles.link}>
               <Image src={mexicoFlag} alt="mexico-flag" />
               <span>VGL Mexico</span>
             </Link>

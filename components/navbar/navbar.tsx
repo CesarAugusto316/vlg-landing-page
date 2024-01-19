@@ -14,19 +14,22 @@ export const Navbar: FC = () => {
     <nav className={styles.container}>
 
       <div className={styles.navigation}>
-        <Image className={styles.logo} src={logo} alt="vlg-logo" />
+        <Link href="/">
+          <Image className={styles.logo} src={logo} alt="vlg-logo" />
+        </Link>
+
         <ul>
           <li>
             <Link href="/" className={styles.link}>Inicio</Link>
           </li>
           <li>
-            <Link href="/chile" className={styles.link}>
+            <Link href="/services/chile" className={styles.link}>
               <Image src={chileFlag} alt="chile-flag" />
               <span>VGL Chile</span>
             </Link>
           </li>
           <li>
-            <Link href="/mexico" className={styles.link}>
+            <Link href="/services/mexico" className={styles.link}>
               <Image src={mexicoFlag} alt="mexico-flag" />
               <span>VGL Mexico</span>
             </Link>
