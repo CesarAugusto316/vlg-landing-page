@@ -3,15 +3,15 @@ import styles from './page.module.scss'
 import logo from '@/assets/vlg_logo470x470_2.png'
 import chileFlag from '@/assets/chile_flag.png'
 import mexicoFlag from '@/assets/mexico_flag.png'
-import { Button } from '@/components/index'
+import { Button, HeroSection } from '@/components/index'
 import Link from 'next/link'
 
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <HeroSection>
 
-      <section className={styles.hero}>
+      <main className={styles.hero}>
         <Image src={logo} alt="vlg-header-logo" className={styles.img} />
 
         <div className={styles.buttons}>
@@ -29,8 +29,8 @@ export default function Home() {
             </Button>
           </Link>
         </div>
-      </section>
+      </main>
 
-    </main>
+    </HeroSection>
   )
 }

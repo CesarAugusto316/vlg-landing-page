@@ -1,0 +1,17 @@
+// @import '../../../sass/mixins';
+
+.container {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  section {
+    width: 90rem;
+  }
+
+  h1 {
+    text-align: center;
+  }
+}

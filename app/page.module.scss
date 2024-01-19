@@ -1,11 +1,4 @@
-.main {
-  height: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(180deg, var(--color-base-100) 0%, var(--color-base-150) 100%);
-
+.hero {
   .img {
     height: 32rem;
     width: 32rem;
@@ -15,13 +8,10 @@
     display: flex;
     gap: 10rem;
   }
-
-  .hero {
-    margin-top: 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 4rem;
-  }
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
 }
