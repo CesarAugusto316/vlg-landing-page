@@ -31,7 +31,9 @@ export const MeetAssistanceSection: FC<MeetAssistanceSectionProps> = (props) => 
             <p>{job}</p>
           </li>
           <li>
-            <Link href={'#'}>{email}</Link>
+            <Link href={email} className={styles.link2}>
+              <span>{email}</span>
+            </Link>
           </li>
         </ul>
 
@@ -47,13 +49,13 @@ export const MeetAssistanceSection: FC<MeetAssistanceSectionProps> = (props) => 
           </li>
           <li>
             <p>Agendar una reunión en GoogleMeet</p>
-            <Link href={meetLink} className={styles.link}>
+            <Link href={meetLink} className={`${styles.link} ${styles.link2}`}>
               <Image src={googleMeetIcon} alt="meet-icon" />
               <span>Agendar</span>
             </Link>
           </li>
         </ul>
       </div>
-    </section>
+    </section >
   )
 }
