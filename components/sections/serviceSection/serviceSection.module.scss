@@ -8,7 +8,7 @@
   justify-content: center;
 
   .section {
-    width: 98rem;
+    width: var(--section-width);
     display: flex;
     flex-direction: column;
     gap: 3rem;

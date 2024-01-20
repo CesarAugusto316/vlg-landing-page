@@ -5,7 +5,7 @@ import img1 from '@/assets/image 21_big.png';
 export default function VlgMexico(): JSX.Element {
   return (
     <SectionOne
-      title="VLG Chile"
+      title="VLG México"
       subtitle="Where can I get some?"
       img={img1}
       link="#"

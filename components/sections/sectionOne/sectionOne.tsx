@@ -1,8 +1,7 @@
-import { Button, ServiceSection } from '@/components/index';
+import { Paragraph, ServiceSection } from '@/components/index';
 import Image, { StaticImageData } from 'next/image';
 import styles from './sectionOne.module.scss';
 import { FC } from 'react';
-import Link from 'next/link';
 
 
 interface SectionOneProps {
@@ -19,15 +18,12 @@ export const SectionOne: FC<SectionOneProps> = ({ title, subtitle, description, 
       <section className={styles.container}>
         <div>
           <h1>{title}</h1>
-          <h2>{subtitle}</h2>
 
-          <p>
-            {description}
-          </p>
-
-          <Link href={link}>
-            <Button variant="primary">¡Comienza ahora!</Button>
-          </Link>
+          <Paragraph
+            subtitle={subtitle}
+            description={description}
+            link={link}
+          />
         </div>
 
         <Image src={img} alt={`hero-image-${title}`} />

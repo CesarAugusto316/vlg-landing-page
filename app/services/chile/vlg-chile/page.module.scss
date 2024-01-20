@@ -1,0 +1,25 @@
+.sectionTwo {
+  min-height: 100vh;
+  background: linear-gradient(180deg,  rgba(250, 250, 250, 0.94), rgba(229, 235, 242, 0.94)), url('../../../../public/assets/background01.png');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .cols {
+    width: var(--section-width);
+    display: flex;
+    gap: 10rem;
+
+    & > div {
+      margin: auto;
+      width: 50%;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      margin: auto;
+      object-fit: cover;
+    }
+  }
+}
