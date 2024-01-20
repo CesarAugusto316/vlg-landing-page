@@ -1,30 +1,30 @@
 
 .meetAssistants {
   background-color: var(--color-secondary);
-  height: 46rem;
+  height: 48rem;
 
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 4rem;
+  gap: 6rem;
 
   .avatarContainer {
     display: flex;
     align-items: center;
-    gap: 2.8rem;
+    gap: 3.2rem;
 
     & > ul:first-child {
       text-align: end;
       display: flex;
       flex-direction: column;
-      gap: 3rem;
+      gap: 3.2rem;
     }
 
     & > ul:last-child {
       display: flex;
       flex-direction: column;
-      gap: 1.4rem;
+      gap: 1.6rem;
 
       li {
         .link {

@@ -1,6 +1,7 @@
-import { Paragraph, SectionOne } from '@/components/index';
+import { MeetAssistanceSection, Paragraph, SectionOne } from '@/components/index';
 import img1 from '@/assets/image 23_big.png';
 import img2 from '@/assets/Rectangle 339946.png';
+import avatar3 from '@/assets/avatar_03.png';
 import styles from './page.module.scss'
 import Image from 'next/image';
 
@@ -41,6 +42,16 @@ export default function VlgAgrominerals(): JSX.Element {
           </div>
         </div>
       </section>
+
+      <MeetAssistanceSection
+        title="¿Dudas sobre Servicio 3? ¡Hablemos!"
+        avatar={avatar3}
+        name="Carlo Marco"
+        email="carlo.marco@victoryline.com"
+        job="Manager Ventas"
+        phone="+569 1731 9971"
+        meetLink="https://meet.google.com/"
+      />
     </>
   )
 }
