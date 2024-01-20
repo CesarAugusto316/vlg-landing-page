@@ -1,6 +1,8 @@
 import { FC } from 'react';
 import styles from './meetAssistanceSection.module.scss';
 import Image, { StaticImageData } from 'next/image';
+import whatsappIcon from '@/assets/whatsapp.png';
+import googleMeetIcon from '@/assets/google_meet.png';
 import Link from 'next/link';
 
 
@@ -19,24 +21,39 @@ export const MeetAssistanceSection: FC<MeetAssistanceSectionProps> = (props) => 
 
   return (
     <section className={styles.meetAssistants}>
-      <h4>{title}</h4>
-
+      <h4 style={{ textAlign: 'center' }}>{title}</h4>
       <div className={styles.avatarContainer}>
-
-        <div>
-          <h5>{name}</h5>
-          <p>{job}</p>
-          <Link href={'#'}>{email}</Link>
-        </div>
+        <ul>
+          <li>
+            <h5>{name}</h5>
+          </li>
+          <li>
+            <p>{job}</p>
+          </li>
+          <li>
+            <Link href={'#'}>{email}</Link>
+          </li>
+        </ul>
 
         <Image src={avatar} alt={`avatar-${name}`} />
 
-        <div>
-          <p>{phone}</p>
-          <Link href={meetLink}>Agendar</Link>
-        </div>
+        <ul>
+          <li>
+            <p>Iniciar chat en Whatsapp</p>
+            <Link href={'#'} className={`${styles.link} ${styles.whatsapp}`}>
+              <Image src={whatsappIcon} alt="whatsapp-number" />
+              <span>{phone}</span>
+            </Link>
+          </li>
+          <li>
+            <p>Agendar una reunión en GoogleMeet</p>
+            <Link href={meetLink} className={styles.link}>
+              <Image src={googleMeetIcon} alt="meet-icon" />
+              <span>Agendar</span>
+            </Link>
+          </li>
+        </ul>
       </div>
-
     </section>
   )
 }
