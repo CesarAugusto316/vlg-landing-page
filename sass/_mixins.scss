@@ -6,6 +6,24 @@
   font-size: 1.6rem;
 
   img {
-    transform: scale(0.82);
+    transform: scale(0.8);
   }
+}
+
+@mixin ColsTwo() {
+   width: var(--section-width);
+    display: flex;
+    gap: 10rem;
+
+    & > div {
+      margin: auto;
+      width: 50%;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      margin: auto;
+      object-fit: cover;
+    }
 }

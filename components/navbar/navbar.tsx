@@ -13,9 +13,8 @@ export const Navbar: FC = () => {
     <nav className={styles.container}>
 
       <section className={styles.navigation}>
-        <Link href="/">
-          <Image className={styles.logo} src={logo} alt="vlg-logo" />
-        </Link>
+
+        <Image className={styles.logo} src={logo} alt="vlg-logo" />
 
         <ul>
           <li>

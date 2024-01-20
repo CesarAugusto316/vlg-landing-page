@@ -1,7 +1,8 @@
-import { Paragraph, SectionOne } from '@/components/index';
+import { MeetAssistanceSection, Paragraph, SectionOne } from '@/components/index';
 import img1 from '@/assets/image 21_big.png';
 import img2 from '@/assets/Group 6754.png';
-import styles from './page.module.scss'
+import avatar from '@/assets/avatar_01.png'
+import styles from './page.module.scss';
 import Image from 'next/image';
 
 
@@ -42,6 +43,20 @@ export default function VlgChile(): JSX.Element {
           </div>
         </div>
       </section>
+
+      <section className={styles.whyDoWeUseIt}>
+
+      </section>
+
+      <MeetAssistanceSection
+        title="Nuestra Experta en Servicio 1"
+        avatar={avatar}
+        name="Lilian Silva"
+        email="lilian.silva@victoryline.com"
+        job="CEO Fundadora"
+        phone="+569 1731 9971"
+        meetLink="https://meet.google.com/"
+      />
     </>
   )
 }
