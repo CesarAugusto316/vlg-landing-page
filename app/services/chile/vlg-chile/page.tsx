@@ -1,4 +1,4 @@
-import { MeetAssistanceSection, Paragraph, SectionOne } from '@/components/index';
+import { MeetAssistanceSection, Paragraph, SectionOne, WhyDoWeSection } from '@/components/index';
 import img1 from '@/assets/image 21_big.png';
 import img2 from '@/assets/Group 6754.png';
 import avatar from '@/assets/avatar_01.png'
@@ -44,9 +44,11 @@ export default function VlgChile(): JSX.Element {
         </div>
       </section>
 
-      <section className={styles.whyDoWeUseIt}>
-
-      </section>
+      <WhyDoWeSection
+        title="Why do we use it?"
+        description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry' s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type"
+        buttonLink="#"
+      />
 
       <MeetAssistanceSection
         title="Nuestra Experta en Servicio 1"
