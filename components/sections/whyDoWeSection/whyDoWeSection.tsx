@@ -27,12 +27,13 @@ const cardData = [
 interface WhyDoWeSectionProps {
   title: string,
   description: string,
-  buttonLink: string
+  buttonLink: string,
+  backGroundImage?: boolean
 }
 
-export const WhyDoWeSection: FC<WhyDoWeSectionProps> = ({ title, description, buttonLink }) => {
+export const WhyDoWeSection: FC<WhyDoWeSectionProps> = ({ title, description, buttonLink, backGroundImage = false }) => {
   return (
-    <div className={sytles.container}>
+    <div className={`${sytles.container} ${backGroundImage && sytles.backGroundImage}`}>
 
       <div className={sytles.content}>
         <h2>{title}</h2>
