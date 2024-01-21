@@ -1,0 +1,57 @@
+.container {
+  margin-top: 3rem;
+  width: var(--section-width);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
+
+  & > * {
+    width: 50%;
+  }
+
+  img {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+  }
+
+  .form {
+    padding: 0 4rem;
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+
+      li {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+
+        label {
+          font-size: 1.5rem;
+          font-weight: 500;
+          color: var(--color-primary);
+        }
+
+        .input {
+          border-radius: 3px;
+          border: 2px solid rgba(57, 52, 84, 0.8);
+          padding: 1.2rem;
+
+          &::placeholder {
+            color: rgba(57, 52, 84, 0.8);
+            font-size: 1.5rem;
+            font-weight: 500;
+            font-family: 'Poppins' sans-serif;
+          }
+        }
+
+        &:last-child {
+          margin-top: 1.6rem;
+        }
+      }
+
+    }
+  }
+}
