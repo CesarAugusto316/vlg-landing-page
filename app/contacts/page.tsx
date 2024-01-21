@@ -42,7 +42,6 @@ export default function Contacts(): JSX.Element {
   return (
     <HeroSection>
       <div className={styles.container}>
-
         <div>
           <Image src={img} alt="image-contacts" />
         </div>
