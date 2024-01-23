@@ -16,6 +16,14 @@
     height: auto;
   }
 
+  .messageSent {
+    padding: 0 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-self: flex-start;
+  }
+
   .form {
     padding: 0 4rem;
     ul {
