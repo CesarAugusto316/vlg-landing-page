@@ -5,6 +5,7 @@ import Image from 'next/image';
 import logo from '@/assets/vlg_logo68x68.png'
 import chileFlag from '@/assets/chile_flag.png'
 import mexicoFlag from '@/assets/mexico_flag.png'
+import bars from '@/assets/bars.png'
 import { Button } from '@/components/index';
 
 
@@ -38,9 +39,10 @@ export const Navbar: FC = () => {
         </ul>
       </section>
 
-      {/* <Link href="/seguimientos"> */}
-      <Button variant="light">Seguimiento</Button>
-      {/* </Link> */}
+      <Link href="#">
+        <Button variant="light">Seguimiento</Button>
+        {/* <Image style={{ height: 32, width: 32 }} src={bars} alt="bars" /> */}
+      </Link>
     </nav>
   )
 }

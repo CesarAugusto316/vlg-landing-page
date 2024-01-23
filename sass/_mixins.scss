@@ -8,16 +8,29 @@
   img {
     transform: scale(0.8);
   }
+
+  span {
+    min-width: 9.6rem;
+  }
 }
 
 @mixin ColsTwo() {
-   width: var(--section-width);
+    width: var(--section-width);
     display: flex;
     gap: 10rem;
+
+    @media screen and (max-width: 900px){
+      padding: 2rem;
+      flex-direction: column;
+    }
 
     & > div {
       margin: auto;
       width: 50%;
+
+      @media screen and (max-width: 600px){
+        width: 100%;
+      }
     }
 
     img {

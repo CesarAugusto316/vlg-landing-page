@@ -7,8 +7,12 @@
   justify-content: center;
   align-items: center;
   gap: 16rem;
-
   height: 32rem;
+
+  @media  screen and (max-width: 900px) {
+    gap: 0rem;
+    justify-content: space-between;
+  }
 
   .col1 {
     display: flex;

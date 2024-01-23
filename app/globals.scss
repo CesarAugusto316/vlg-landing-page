@@ -92,11 +92,12 @@ a {
 @media screen and (max-width: 900px) {
   :root {
     font-size: 59%;
+    --section-width: 100%;
   }
 }
 
 @media screen and (max-width: 600px) {
   :root {
-    font-size: 56%;
+    font-size: 57%;
   }
 }
