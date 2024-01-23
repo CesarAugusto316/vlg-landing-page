@@ -5,14 +5,15 @@ import ContentLoader from 'react-content-loader'
 const LoadingSkeleton = () => {
   return (
     <ContentLoader
-      viewBox="0 0 500 500"
-      height={340}
-      width={340}
+      viewBox="0 0 980 400" // Increased viewBox to accommodate larger circle
+      width={980} // Increased width to accommodate larger circle
+      height={400} // Increased height to accommodate larger circle
       backgroundColor="#f3f3f3"
       foregroundColor="#ecebeb"
     >
-      <rect x="10" y="10" rx="10" ry="10" width="480" height="480" />
-      <ellipse cx="250" cy="250" rx="100" ry="100" />
+      <circle cx="490" cy="160" r="140" />
+      <rect x="270" y="342" rx="20" ry="20" width="170" height="50" />
+      <rect x="540" y="342" rx="20" ry="20" width="170" height="50" />
     </ContentLoader>
   )
 }
