@@ -1,4 +1,4 @@
-.container{
+.container {
   min-height: 100vh;
   padding: 10rem 0rem;
   padding-top: 12rem;
@@ -6,6 +6,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 900px) {
+    padding: var(--section-top-padding) 0rem;
+    padding-top: 14rem;
+  }
 
   .section {
     width: var(--section-width);

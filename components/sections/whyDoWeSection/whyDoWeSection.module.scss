@@ -7,8 +7,12 @@
   justify-content: center;
   gap: 5rem;
 
-  @media screen and (max-width: 600px){
+  @media screen and (max-width: 600px) {
     padding: 2rem;
+  }
+
+  @media screen and (max-width: 900px) {
+    padding: var(--section-top-padding) 2rem;
   }
 
   .content {
@@ -24,7 +28,7 @@
     display: flex;
     justify-content: space-around;
 
-    @media screen and (max-width: 600px){
+    @media screen and (max-width: 600px) {
       flex-direction: column;
       align-items: center;
     }
@@ -36,7 +40,7 @@
       flex-direction: column;
       align-items: center;
 
-      @media screen and (max-width: 600px){
+      @media screen and (max-width: 600px) {
         width: 100%;
         max-width: 22rem;
       }
@@ -51,5 +55,10 @@
 }
 
 .backGroundImage {
-  background: linear-gradient(180deg,  rgba(250, 250, 250, 0.93), rgba(229, 235, 242, 0.93)), url('../../../public/assets/background02.png');
+  background: linear-gradient(
+      180deg,
+      rgba(250, 250, 250, 0.93),
+      rgba(229, 235, 242, 0.93)
+    ),
+    url("../../../public/assets/background02.png");
 }
