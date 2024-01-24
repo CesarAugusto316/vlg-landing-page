@@ -1,11 +1,37 @@
-@import '../../sass/mixins';
+@import "../../sass/mixins";
+
+.mobileDropdown {
+  @media screen and (min-width: 900px) {
+    display: none;
+  }
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
+  position: absolute;
+  width: 100%;
+  top: 8.8rem;
+  right: 0;
+  background-color: var(--color-primary);
+  padding: 3rem;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+
+  .link {
+    @include Link();
+  }
+
+  li:last-child {
+    margin-top: 2.6rem;
+  }
+}
 
 .container {
   position: fixed;
   z-index: 100;
   width: 100%;
   top: 0%;
-  height: 8.4rem;
+  height: 8.8rem;
   color: var(--color-base-100);
   background-color: var(--color-primary);
 
@@ -14,17 +40,46 @@
   justify-content: space-between;
   padding: 0 8rem;
 
+  @media screen and (max-width: 900px) {
+    padding: 0 2rem;
+  }
+
+  .bars {
+    display: none;
+    background-color: transparent;
+
+    @media screen and (max-width: 900px) {
+      display: block;
+      cursor: pointer;
+    }
+
+    img {
+      width: 3.6rem;
+      height: 3.6rem;
+    }
+  }
+
+  .followUp {
+    @media screen and (max-width: 900px) {
+      display: none;
+    }
+  }
+
   .navigation {
     display: flex;
     align-items: center;
     gap: 4rem;
 
     .logo {
-      height: 6rem;
-      width: 6rem;
+      height: 6.4rem;
+      width: 6.4rem;
     }
 
     ul {
+      @media screen and (max-width: 900px) {
+        display: none;
+      }
+
       display: flex;
       gap: 3.8rem;
 
