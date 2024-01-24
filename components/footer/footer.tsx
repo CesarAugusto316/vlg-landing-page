@@ -16,7 +16,12 @@ export const Footer: FC = () => {
     <footer className={styles.container}>
 
       <section className={styles.col1}>
-        <h3>Victoria Line Group</h3>
+
+
+        <h3 className={styles.title}>
+          <Image className={styles.logoMobile} src={logo} alt="vlg-log" />
+          <span>Victoria Line Group</span>
+        </h3>
         <p>2024 @ VictoriaLineGroup <br />
           Todos los derechos reservados.
         </p>
@@ -46,7 +51,7 @@ export const Footer: FC = () => {
             <Link href="/contacts" className={styles.link}>Contactos</Link>
           </li>
           <li>
-            <Link href="/seguimientos" className={styles.link}>Seguimientos</Link>
+            <Link href="/seguimientos" className={styles.link}>Seguimiento</Link>
           </li>
         </ul>
 
@@ -62,6 +67,32 @@ export const Footer: FC = () => {
               <Image src={mexicoFlag} alt="mexico-flag" />
               <span>VGL Mexico</span>
             </Link>
+          </li>
+        </ul>
+      </section>
+
+      <section className={styles.col2Mobile}>
+        <ul>
+          <li>
+            <Link href="/" className={styles.link}>Inicio</Link>
+          </li>
+          <li>
+            <Link href="/services/chile" className={styles.link}>
+              <Image src={chileFlag} alt="chile-flag" />
+              <span>VGL Chile</span>
+            </Link>
+          </li>
+          <li>
+            <Link href="/services/mexico" className={styles.link}>
+              <Image src={mexicoFlag} alt="mexico-flag" />
+              <span>VGL Mexico</span>
+            </Link>
+          </li>
+          <li>
+            <Link href="/contacts" className={styles.link}>Contactos</Link>
+          </li>
+          <li>
+            <Link href="/seguimientos" className={styles.link}>Seguimiento</Link>
           </li>
         </ul>
       </section>

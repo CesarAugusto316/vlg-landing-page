@@ -20,7 +20,7 @@
 
     @media screen and (max-width: 900px) {
       flex-direction: column;
-      gap: 5.6rem;
+      gap: 5.2rem;
     }
 
     & > ul:first-child {
@@ -31,6 +31,7 @@
 
       @media screen and (max-width: 900px) {
         text-align: center;
+        gap: 2.2rem;
       }
     }
 
