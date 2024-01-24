@@ -8,17 +8,21 @@
   display: flex;
   flex-direction: column;
   gap: 2.8rem;
-  position: absolute;
+
   width: 100%;
-  top: 8.8rem;
+  top: 0;
+  position: absolute;
+  z-index: 20;
   right: 0;
-  background-color: var(--color-primary);
+  background-color: var(--color-base-100);
   padding: 3rem;
+  padding-top: calc(8.8rem + 3rem);
   border-bottom-right-radius: 8px;
   border-bottom-left-radius: 8px;
 
   .link {
     @include Link();
+    color: var(--color-primary);
   }
 
   li:last-child {
@@ -26,11 +30,25 @@
   }
 }
 
-.container {
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+}
+
+.wrapper {
   position: fixed;
-  z-index: 100;
+  z-index: 10;
   width: 100%;
   top: 0%;
+}
+
+.container {
+  position: relative;
+  z-index: 100;
   height: 8.8rem;
   color: var(--color-base-100);
   background-color: var(--color-primary);
