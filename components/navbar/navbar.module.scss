@@ -15,12 +15,13 @@
   z-index: 20;
   right: 0;
   background-color: var(--color-base-100);
-  padding: 3rem;
-  padding-top: calc(8.8rem + 3rem);
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
+  padding: 2rem;
+  padding-top: calc(8.8rem + 5rem);
+  padding-bottom: 5rem;
+  border-bottom-right-radius: 14px;
+  border-bottom-left-radius: 14px;
 
-  @media screen and (max-width: 9600px) {
+  @media screen and (max-width: 600px) {
     align-items: center;
   }
 
@@ -77,8 +78,8 @@
     }
 
     img {
-      width: 3.6rem;
-      height: 3.6rem;
+      width: 3.4rem;
+      height: 3.4rem;
     }
   }
 
@@ -96,6 +97,11 @@
     .logo {
       height: 6.4rem;
       width: 6.4rem;
+
+      @media screen and (max-width: 600px) {
+        height: 5.4rem;
+        width: 5.4rem;
+      }
     }
 
     ul {

@@ -13,7 +13,7 @@ export default function Home() {
     <HeroSection>
 
       <main className={styles.main}>
-        <Image priority placeholder="blur" src={logo} alt="vlg-header-logo" className={styles.img} />
+        <Image priority placeholder="blur" src={logo} alt="vlg-header-logo" className={styles.imgHero} />
 
         <div className={styles.buttons}>
           <Link href="/services/chile">

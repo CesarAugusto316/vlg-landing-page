@@ -56,16 +56,17 @@ export const Navbar: FC = () => {
         </button>
       </nav>
 
-      <MobileDropDown isOpen={toggleButton} />
+      <MobileDropDown isOpen={toggleButton} onClose={() => setToggleButton(false)} />
     </div>
   )
 }
 
 interface MobileDropDownProps {
   isOpen: boolean;
+  onClose?: () => void;
 }
 
-const MobileDropDown: FC<MobileDropDownProps> = ({ isOpen }) => {
+const MobileDropDown: FC<MobileDropDownProps> = ({ isOpen, onClose }) => {
   const transition = useTransition(isOpen, {
     from: {
       y: '-100%',
@@ -113,7 +114,7 @@ const MobileDropDown: FC<MobileDropDownProps> = ({ isOpen }) => {
           </Link>
         </li>
       </animated.ul>
-      <animated.div style={{ opacity: style.opacity }} className={styles.backdrop}>
+      <animated.div onClick={onClose} style={{ opacity: style.opacity }} className={styles.backdrop}>
       </animated.div>
     </>
   ))
