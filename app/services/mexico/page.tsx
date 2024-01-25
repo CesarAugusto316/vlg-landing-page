@@ -35,7 +35,7 @@ export default function Mexico(): JSX.Element {
     <ServiceSection>
       <h1 className={styles.h1}>Victoria Line Group - México</h1>
 
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos; s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type</p>
+      <p className={styles.p}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos; s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type</p>
 
       <div className={styles.cards}>
         {cardData.map((card, index) => (
