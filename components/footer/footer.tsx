@@ -17,7 +17,6 @@ export const Footer: FC = () => {
 
       <section className={styles.col1}>
 
-
         <h3 className={styles.title}>
           <Image className={styles.logoMobile} src={logo} alt="vlg-log" />
           <span>Victoria Line Group</span>
