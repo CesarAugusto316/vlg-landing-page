@@ -8,10 +8,16 @@
 
   @media screen and (max-width: 600px) {
     flex-direction: column-reverse;
+    padding: 8rem 2rem;
+    padding-top: 14rem;
   }
 
   & > * {
     width: 50%;
+
+    @media screen and (max-width: 600px) {
+      width: 100%;
+    }
   }
 
   img {
@@ -26,10 +32,19 @@
     flex-direction: column;
     gap: 2rem;
     align-self: flex-start;
+
+    @media screen and (max-width: 600px) {
+      padding: 0;
+    }
   }
 
   .form {
     padding: 0 4rem;
+
+    @media screen and (max-width: 600px) {
+      padding: 0;
+    }
+
     ul {
       display: flex;
       flex-direction: column;
