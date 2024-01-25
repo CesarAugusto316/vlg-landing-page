@@ -20,23 +20,28 @@
   border-bottom-right-radius: 8px;
   border-bottom-left-radius: 8px;
 
+  @media screen and (max-width: 9600px) {
+    align-items: center;
+  }
+
   .link {
     @include Link();
     color: var(--color-primary);
   }
 
   li:last-child {
-    margin-top: 2.6rem;
+    margin-top: 6rem;
   }
 }
 
 .backdrop {
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(2px);
-  width: 100vw;
-  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
   position: absolute;
   top: 0;
+  right: 0;
 }
 
 .wrapper {
