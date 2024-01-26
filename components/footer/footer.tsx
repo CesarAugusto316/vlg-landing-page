@@ -1,14 +1,13 @@
 import { FC } from 'react'
 import styles from './footer.module.scss'
 import logo from '@/assets/vlg_logo470x470.png'
-import chileFlag from '@/assets/chile_flag.png'
-import mexicoFlag from '@/assets/mexico_flag.png'
 import instagram from '@/assets/instagram.png'
 import facebook from '@/assets/facebook.png'
 import linkedin from '@/assets/linkedin.png'
 import twitter from '@/assets/twitter.png'
 import Image from 'next/image'
 import Link from 'next/link'
+import { links } from '../../helpers/constants'
 
 
 export const Footer: FC = () => {
@@ -21,7 +20,7 @@ export const Footer: FC = () => {
           <Image className={styles.logoMobile} src={logo} alt="vlg-log" />
           <span>Victoria Line Group</span>
         </h3>
-        <p>2024 @ VictoriaLineGroup <br />
+        <p>2024 @victoriaLine <br />
           Todos los derechos reservados.
         </p>
 
@@ -49,50 +48,46 @@ export const Footer: FC = () => {
           <li>
             <Link href="/contacts" className={styles.link}>Contactos</Link>
           </li>
-          <li>
-            <Link href="/seguimientos" className={styles.link}>Seguimiento</Link>
-          </li>
+          {/* <li>
+            <Link href="/seguimientos" className={styles.link}>Esp</Link>
+          </li> */}
         </ul>
 
         <ul>
-          <li>
-            <Link href="/services/chile" className={styles.link}>
-              <Image src={chileFlag} alt="chile-flag" />
-              <span>VGL Chile</span>
-            </Link>
-          </li>
-          <li>
-            <Link href="/services/mexico" className={styles.link}>
-              <Image src={mexicoFlag} alt="mexico-flag" />
-              <span>VGL Mexico</span>
-            </Link>
-          </li>
+          {links.slice(1, 3).map((link, index) => (
+            !link.icon ?
+              <li key={index}>
+                <Link href={link.path} className={styles.link}>{link.name}</Link>
+              </li>
+              :
+              <li key={index}>
+                <Link href={link.path} className={styles.link}>
+                  <Image src={link.icon} alt={`chile-${link.name}`} />
+                  <span>{link.name}</span>
+                </Link>
+              </li>
+          ))}
         </ul>
       </section>
 
       <section className={styles.col2Mobile}>
         <ul>
-          <li>
-            <Link href="/" className={styles.link}>Inicio</Link>
-          </li>
-          <li>
-            <Link href="/services/chile" className={styles.link}>
-              <Image src={chileFlag} alt="chile-flag" />
-              <span>VGL Chile</span>
-            </Link>
-          </li>
-          <li>
-            <Link href="/services/mexico" className={styles.link}>
-              <Image src={mexicoFlag} alt="mexico-flag" />
-              <span>VGL Mexico</span>
-            </Link>
-          </li>
-          <li>
-            <Link href="/contacts" className={styles.link}>Contactos</Link>
-          </li>
-          <li>
+          {links.map((link, index) => (
+            !link.icon ?
+              <li key={index}>
+                <Link href={link.path} className={styles.link}>{link.name}</Link>
+              </li>
+              :
+              <li key={index}>
+                <Link href={link.path} className={styles.link}>
+                  <Image src={link.icon} alt={`chile-${link.name}`} />
+                  <span>{link.name}</span>
+                </Link>
+              </li>
+          ))}
+          {/* <li>
             <Link href="/seguimientos" className={styles.link}>Seguimiento</Link>
-          </li>
+          </li> */}
         </ul>
       </section>
 

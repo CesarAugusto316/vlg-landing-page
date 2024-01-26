@@ -3,15 +3,14 @@ import { FC, useState } from 'react';
 import Link from 'next/link'
 import styles from './navbar.module.scss'
 import Image from 'next/image';
-import logo from '@/assets/vlg_logo156x156.png'
-import chileFlag from '@/assets/chile_flag.png'
-import mexicoFlag from '@/assets/mexico_flag.png'
+import logo from '@/assets/vlg_logo470x470.png'
 import bars from '@/assets/bars-solid.svg'
 import xIcon from '@/assets/x-solid.svg'
 import globeIcon from '@/assets/globe.png'
 import globeIconDark from '@/assets/globe_darkBlue.png'
 import { useTransition, animated } from '@react-spring/web';
 import { Modal } from '@/components/index'
+import { links } from '../../helpers/constants';
 
 
 export const Navbar: FC = () => {
@@ -25,24 +24,19 @@ export const Navbar: FC = () => {
           <Image className={styles.logo} src={logo} alt="vlg-logo" />
 
           <ul>
-            <li>
-              <Link href="/" className={styles.link}>Inicio</Link>
-            </li>
-            <li>
-              <Link href="/services/chile" className={styles.link}>
-                <Image src={chileFlag} alt="chile-flag" />
-                <span>VGL Chile</span>
-              </Link>
-            </li>
-            <li>
-              <Link href="/services/mexico" className={styles.link}>
-                <Image src={mexicoFlag} alt="mexico-flag" />
-                <span>VGL Mexico</span>
-              </Link>
-            </li>
-            <li>
-              <Link href="/contacts" className={styles.link}>Contactos</Link>
-            </li>
+            {links.map((link, index) => (
+              !link.icon ?
+                <li key={index}>
+                  <Link href={link.path} className={styles.link}>{link.name}</Link>
+                </li>
+                :
+                <li key={index}>
+                  <Link href={link.path} className={styles.link}>
+                    <Image src={link.icon} alt={`chile-${link.name}`} />
+                    <span>{link.name}</span>
+                  </Link>
+                </li>
+            ))}
           </ul>
         </section>
 
@@ -114,24 +108,19 @@ const MobileDropDown: FC<MobileDropDownProps> = ({ isOpen, onClose }) => {
     isOpen &&
     <>
       <animated.ul style={{ transform: style.y.to(y => `translateY(${y})`) }} className={styles.mobileDropdown}>
-        <li>
-          <Link href="/" className={styles.link}>Inicio</Link>
-        </li>
-        <li>
-          <Link href="/services/chile" className={styles.link}>
-            <Image src={chileFlag} alt="chile-flag" />
-            <span>VGL Chile</span>
-          </Link>
-        </li>
-        <li>
-          <Link href="/services/mexico" className={styles.link}>
-            <Image src={mexicoFlag} alt="mexico-flag" />
-            <span>VGL Mexico</span>
-          </Link>
-        </li>
-        <li>
-          <Link href="/contacts" className={styles.link}>Contactos</Link>
-        </li>
+        {links.map((link, index) => (
+          !link.icon ?
+            <li key={index}>
+              <Link href={link.path} className={styles.link}>{link.name}</Link>
+            </li>
+            :
+            <li key={index}>
+              <Link href={link.path} className={styles.link}>
+                <Image src={link.icon} alt={`chile-${link.name}`} />
+                <span>{link.name}</span>
+              </Link>
+            </li>
+        ))}
         <li>
           <button onClick={() => setToggleLanguage(true)} className={styles.languageBtn}>
             <Image src={globeIconDark} alt="globe" />

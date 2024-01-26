@@ -17,7 +17,7 @@ const cardData = [
     link: '/services/mexico/vlg-mexico',
   },
   {
-    title: 'VLG Shipping',
+    title: 'Logística nacional',
     img: img2,
     description: (
       <>
