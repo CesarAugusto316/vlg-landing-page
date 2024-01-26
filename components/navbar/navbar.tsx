@@ -8,16 +8,18 @@ import chileFlag from '@/assets/chile_flag.png'
 import mexicoFlag from '@/assets/mexico_flag.png'
 import bars from '@/assets/bars-solid.svg'
 import xIcon from '@/assets/x-solid.svg'
+import globeIcon from '@/assets/globe.png'
 import { Button } from '@/components/index';
 import { useTransition, animated } from '@react-spring/web';
 
 
 export const Navbar: FC = () => {
   const [toggleButton, setToggleButton] = useState(false);
+  const [toggleLanguage, setToggleLanguage] = useState(false);
 
   return (
     <div className={styles.wrapper}>
-      <nav className={styles.container}>
+      <nav className={styles.navbarContainer}>
         <section className={styles.navigation}>
           <Image className={styles.logo} src={logo} alt="vlg-logo" />
 
@@ -43,10 +45,26 @@ export const Navbar: FC = () => {
           </ul>
         </section>
 
-        <Link href="#" className={styles.followUp}>
-          <Button variant="light">Seguimiento</Button>
-        </Link>
+        <button
+          className={styles.languageBtn}
+          onClick={() => setToggleLanguage(prev => !prev)}
+          onMouseEnter={() => setToggleLanguage(true)}
+          onMouseLeave={() => setToggleLanguage(false)}
+        >
+          <Image src={globeIcon} alt="globe" />
+          <span>Esp</span>
 
+          {toggleLanguage && (
+            <div className={styles.desktopLangDropdwon}>
+              <ul>
+                <li onClick={() => setToggleLanguage(false)}>Español</li>
+                <li onClick={() => setToggleLanguage(false)}>Inglés</li>
+              </ul>
+            </div>
+          )}
+        </button>
+
+        {/* appears on mobile  */}
         <button onClick={() => setToggleButton(prev => !prev)} className={styles.bars}>
           {toggleButton ?
             <Image src={xIcon} alt="x-icon" />
@@ -54,6 +72,7 @@ export const Navbar: FC = () => {
             <Image src={bars} alt="bars" />
           }
         </button>
+        {/* appears on mobile  */}
       </nav>
 
       <MobileDropDown isOpen={toggleButton} onClose={() => setToggleButton(false)} />

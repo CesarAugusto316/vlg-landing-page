@@ -31,7 +31,7 @@
   }
 
   li:last-child {
-    margin-top: 6rem;
+    margin-top: 5rem;
   }
 }
 
@@ -52,7 +52,7 @@
   top: 0%;
 }
 
-.container {
+.navbarContainer {
   position: relative;
   z-index: 100;
   height: 8.8rem;
@@ -83,9 +83,47 @@
     }
   }
 
-  .followUp {
+  .languageBtn {
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--color-base-100);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 700;
+    font-size: 1.8rem;
+    height: 100%;
+
     @media screen and (max-width: 900px) {
       display: none;
+    }
+  }
+
+  .desktopLangDropdwon {
+    position: absolute;
+    top: 8.8rem;
+    right: 6rem;
+    background-color: var(--color-primary);
+    color: var(--color-base-100);
+    padding: 2rem 2.4rem;
+    border-radius: 4px;
+    font-weight: 700;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+
+      li {
+        cursor: pointer;
+        padding: 0.2rem 1.2rem;
+
+        &:hover {
+          color: var(--color-primary);
+          background-color: var(--color-base-100);
+          border-radius: 4px;
+        }
+      }
     }
   }
 
