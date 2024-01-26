@@ -17,7 +17,7 @@
   background-color: var(--color-base-100);
   padding: 3rem;
   padding-top: calc(8.8rem + 3rem);
-  // padding-bottom: 5rem;
+  padding-bottom: 1rem;
   border-bottom-right-radius: 14px;
   border-bottom-left-radius: 14px;
 
@@ -68,7 +68,7 @@
 }
 
 .backdrop {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(2px);
   width: 100dvw;
   height: 100dvh;

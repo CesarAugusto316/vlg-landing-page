@@ -11,6 +11,7 @@ import xIcon from '@/assets/x-solid.svg'
 import globeIcon from '@/assets/globe.png'
 import globeIconDark from '@/assets/globe_darkBlue.png'
 import { useTransition, animated } from '@react-spring/web';
+import { Modal } from '@/components/index'
 
 
 export const Navbar: FC = () => {
@@ -45,6 +46,7 @@ export const Navbar: FC = () => {
           </ul>
         </section>
 
+        {/* appears on desktop  */}
         <button
           className={styles.languageBtn}
           onClick={() => setToggleLanguage(prev => !prev)}
@@ -63,6 +65,7 @@ export const Navbar: FC = () => {
             </div>
           )}
         </button>
+        {/* appears on desktop  */}
 
         {/* appears on mobile  */}
         <button onClick={() => setToggleButton(prev => !prev)} className={styles.bars}>
@@ -86,6 +89,8 @@ interface MobileDropDownProps {
 }
 
 const MobileDropDown: FC<MobileDropDownProps> = ({ isOpen, onClose }) => {
+  const [toggleLanguage, setToggleLanguage] = useState(false);
+
   const transition = useTransition(isOpen, {
     from: {
       y: '-100%',
@@ -101,7 +106,7 @@ const MobileDropDown: FC<MobileDropDownProps> = ({ isOpen, onClose }) => {
     },
     config: {
       tension: 220,
-      mass: 1.2
+      mass: 1.4
     }
   });
 
@@ -128,14 +133,21 @@ const MobileDropDown: FC<MobileDropDownProps> = ({ isOpen, onClose }) => {
           <Link href="/contacts" className={styles.link}>Contactos</Link>
         </li>
         <li>
-          <button className={styles.languageBtn}>
+          <button onClick={() => setToggleLanguage(true)} className={styles.languageBtn}>
             <Image src={globeIconDark} alt="globe" />
             <span>Esp</span>
           </button>
+
+          <Modal isOpen={toggleLanguage} onClose={() => setToggleLanguage(false)} >
+            <ul>
+              <li>Espaniol</li>
+              <li>Ingles</li>
+            </ul>
+          </Modal>
         </li>
       </animated.ul>
-      <animated.div onClick={onClose} style={{ opacity: style.opacity }} className={styles.backdrop}>
-      </animated.div>
+
+      <animated.div onClick={onClose} style={{ opacity: style.opacity }} className={styles.backdrop} />
     </>
   ))
 }

@@ -20,6 +20,9 @@ export default function RootLayout({ children }: RootProps) {
   return (
     <html lang="en">
       <body className={poppins.className}>
+
+        <div id="modal"></div>
+
         <Navbar />
 
         {children}
