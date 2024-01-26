@@ -7,7 +7,7 @@ export default function VlgShipping(): JSX.Element {
   return (
     <>
       <SectionOne
-        title="VLG Shipping"
+        title="Logística nacional"
         subtitle="Why do we use it?"
         img={img1}
         link="#"
