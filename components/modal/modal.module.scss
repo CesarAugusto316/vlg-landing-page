@@ -1,9 +1,9 @@
 .container {
   background-color: var(--color-base-100);
   padding: 2rem;
-  min-height: 10rem;
-  width: 20rem;
+  width: 24rem;
   border-radius: 1rem;
+  border: 2px solid var(--color-primary);
 }
 
 .backdrop {

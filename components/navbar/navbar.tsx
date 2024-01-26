@@ -139,9 +139,9 @@ const MobileDropDown: FC<MobileDropDownProps> = ({ isOpen, onClose }) => {
           </button>
 
           <Modal isOpen={toggleLanguage} onClose={() => setToggleLanguage(false)} >
-            <ul>
-              <li>Espaniol</li>
-              <li>Ingles</li>
+            <ul className={styles.modalLanguages}>
+              <li onClick={() => setToggleLanguage(false)}>Español</li>
+              <li onClick={() => setToggleLanguage(false)}>Inglés</li>
             </ul>
           </Modal>
         </li>

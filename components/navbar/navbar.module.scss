@@ -1,5 +1,33 @@
 @import "../../sass/mixins";
 
+@mixin LightLink() {
+  @include Link();
+  color: var(--color-primary);
+  padding: 1rem 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--color-base-100);
+    background-color: var(--color-primary);
+    border-radius: 4px;
+  }
+}
+
+ul.modalLanguages {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 1.8rem;
+
+  li {
+    @include LightLink();
+  }
+}
+
 .mobileDropdown {
   @media screen and (min-width: 900px) {
     display: none;
@@ -21,23 +49,8 @@
   border-bottom-right-radius: 14px;
   border-bottom-left-radius: 14px;
 
-  @media screen and (max-width: 600px) {
-    // align-items: center;
-  }
-
   .link {
-    @include Link();
-    color: var(--color-primary);
-    padding: 1rem 2rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-
-    &:hover {
-      color: var(--color-base-100);
-      background-color: var(--color-primary);
-      border-radius: 4px;
-    }
+    @include LightLink();
   }
 
   li:last-child {
@@ -50,13 +63,13 @@
       background-color: transparent;
       align-items: center;
       gap: 1rem;
-      font-weight: 700;
       height: 100%;
       color: var(--color-primary);
       width: 100%;
       padding: 2rem;
       display: flex;
       justify-content: center;
+      font-weight: 700;
 
       // &:hover {
       //   color: var(--color-base-100);
