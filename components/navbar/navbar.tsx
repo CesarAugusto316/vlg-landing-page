@@ -9,7 +9,7 @@ import mexicoFlag from '@/assets/mexico_flag.png'
 import bars from '@/assets/bars-solid.svg'
 import xIcon from '@/assets/x-solid.svg'
 import globeIcon from '@/assets/globe.png'
-import { Button } from '@/components/index';
+import globeIconDark from '@/assets/globe_darkBlue.png'
 import { useTransition, animated } from '@react-spring/web';
 
 
@@ -128,9 +128,10 @@ const MobileDropDown: FC<MobileDropDownProps> = ({ isOpen, onClose }) => {
           <Link href="/contacts" className={styles.link}>Contactos</Link>
         </li>
         <li>
-          <Link href="#">
-            <Button variant="light">Seguimiento</Button>
-          </Link>
+          <button className={styles.languageBtn}>
+            <Image src={globeIconDark} alt="globe" />
+            <span>Esp</span>
+          </button>
         </li>
       </animated.ul>
       <animated.div onClick={onClose} style={{ opacity: style.opacity }} className={styles.backdrop}>
