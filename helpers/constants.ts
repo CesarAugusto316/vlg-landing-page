@@ -1,4 +1,5 @@
 import chileFlag from '@/assets/chile_flag.png'
+import mexicoFlag from '@/assets/mexico_flag.png'
 
 export const links = [
   {
@@ -12,8 +13,8 @@ export const links = [
     path: '/services/chile',
   },
   {
-    name: 'Fletes marítimos y/o Aereos',
-    icon: null,
+    name: 'VlG Mexico',
+    icon: mexicoFlag,
     path: '/services/mexico',
   },
   {
@@ -30,11 +31,11 @@ export const linksMobile = [
     icon: null,
     path: '/',
   },
-  {
-    name: 'Victoria Line',
-    icon: chileFlag,
-    path: '/services/chile',
-  },
+  // {
+  //   name: 'Victoria Line',
+  //   // icon: chileFlag,
+  //   path: '/',
+  // },
   {
     name: 'Contactos',
     icon: null,

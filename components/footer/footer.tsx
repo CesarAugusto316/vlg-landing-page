@@ -54,18 +54,19 @@ export const Footer: FC = () => {
         </ul>
 
         <ul>
-          {linksMobile.slice(1, 2).map((link, index) => (
+          {linksMobile.slice(1, 1).map((link, index) => (
             !link.icon ?
               <li key={index}>
                 <Link href={link.path} className={styles.link}>{link.name}</Link>
               </li>
               :
-              <li key={index}>
-                <Link href={link.path} className={styles.link}>
-                  <Image src={link.icon} alt={`chile-${link.name}`} />
-                  <span>{link.name}</span>
-                </Link>
-              </li>
+              null
+            // <li key={index}>
+            //   <Link href={link.path} className={styles.link}>
+            //     <Image src={link.icon} alt={`chile-${link.name}`} />
+            //     <span>{link.name}</span>
+            //   </Link>
+            // </li>
           ))}
         </ul>
       </section>
@@ -78,16 +79,14 @@ export const Footer: FC = () => {
                 <Link href={link.path} className={styles.link}>{link.name}</Link>
               </li>
               :
-              <li key={index}>
-                <Link href={link.path} className={styles.link}>
-                  <Image src={link.icon} alt={`chile-${link.name}`} />
-                  <span>{link.name}</span>
-                </Link>
-              </li>
+              null
+            // <li key={index}>
+            //   <Link href={link.path} className={styles.link}>
+            //     <Image src={link.icon} alt={`chile-${link.name}`} />
+            //     <span>{link.name}</span>
+            //   </Link>
+            // </li>
           ))}
-          {/* <li>
-            <Link href="/seguimientos" className={styles.link}>Seguimiento</Link>
-          </li> */}
         </ul>
       </section>
 
