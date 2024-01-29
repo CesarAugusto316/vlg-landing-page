@@ -22,3 +22,22 @@ export const links = [
     path: '/contacts',
   },
 ]
+
+
+export const linksMobile = [
+  {
+    name: 'Inicio',
+    icon: null,
+    path: '/',
+  },
+  {
+    name: 'Victoria Line',
+    icon: chileFlag,
+    path: '/services/chile',
+  },
+  {
+    name: 'Contactos',
+    icon: null,
+    path: '/contacts',
+  },
+]

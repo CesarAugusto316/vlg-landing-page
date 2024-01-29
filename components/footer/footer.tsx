@@ -7,7 +7,7 @@ import linkedin from '@/assets/linkedin.png'
 import twitter from '@/assets/twitter.png'
 import Image from 'next/image'
 import Link from 'next/link'
-import { links } from '../../helpers/constants'
+import { linksMobile } from '../../helpers/constants'
 
 
 export const Footer: FC = () => {
@@ -54,7 +54,7 @@ export const Footer: FC = () => {
         </ul>
 
         <ul>
-          {links.slice(1, 3).map((link, index) => (
+          {linksMobile.slice(1, 2).map((link, index) => (
             !link.icon ?
               <li key={index}>
                 <Link href={link.path} className={styles.link}>{link.name}</Link>
@@ -72,7 +72,7 @@ export const Footer: FC = () => {
 
       <section className={styles.col2Mobile}>
         <ul>
-          {links.map((link, index) => (
+          {linksMobile.map((link, index) => (
             !link.icon ?
               <li key={index}>
                 <Link href={link.path} className={styles.link}>{link.name}</Link>
